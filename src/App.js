@@ -1,15 +1,17 @@
 import React from 'react';
-import './App.css';
+import {Route, Switch} from 'react-router-dom';
 import Header from './Components/header/header'
+import HomePage from './Routes/HomePage'
+import './App.css';
 
 function App() {
   return (
     <React.Fragment>
-      <Header>
-
-      </Header>
+      <Header/>
       <main>
-        
+        <Switch>
+          <Route exact path={'/'} component  ={HomePage}/>
+        </Switch>
       </main>
     </React.Fragment>
   );
